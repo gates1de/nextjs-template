@@ -5,9 +5,10 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "deploy": "next build && next export",
     "type-check": "tsc",
     "lint": "eslint src/** --ext .ts,.tsx",
-    "format": "prettier --write src/**/*.ts src/**/*.tsx"
+    "format": "prettier --write src/*.ts src/**/*.ts src/**/*.tsx"
   },
   "husky": {
     "hooks": {

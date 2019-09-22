@@ -27,5 +27,7 @@ module.exports = {
     "prettier"
   ],
   "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/camelcase": "warn",
   }
 };
