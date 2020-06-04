@@ -29,5 +29,8 @@ module.exports = {
   "rules": {
     "prettier/prettier": "error",
     "@typescript-eslint/camelcase": "warn",
+    "@typescript-eslint/no-use-before-define": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-var-requires": "warn",
   }
 };
