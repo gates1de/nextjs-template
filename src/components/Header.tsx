@@ -18,7 +18,7 @@ const Header: React.FC<Props> = ({ title = 'Title', navigationItems = [] }) => (
     </Head>
     <header>
       <nav>
-        {navigationItems.map(item => (
+        {navigationItems.map((item) => (
           <Link key={item.title} href={item.link}>
             <a>{item.title}</a>
           </Link>

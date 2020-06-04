@@ -7,7 +7,7 @@
     "start": "next start",
     "deploy": "next build && next export",
     "type-check": "tsc",
-    "lint": "eslint src/** --ext .ts,.tsx",
+    "lint": "eslint 'src/**' --ext .ts,.tsx",
     "format": "prettier --write src/*.ts src/**/*.ts src/**/*.tsx"
   },
   "husky": {
@@ -23,28 +23,25 @@
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
-    "dotenv-webpack": "^1.7.0",
-    "next": "latest",
+    "next": "^9.4.4",
     "normalize.css": "^8.0.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "styled-components": "^4.3.2"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.8.5",
-    "@types/styled-components": "^4.1.19",
-    "@typescript-eslint/eslint-plugin": "^2.0.0",
-    "@typescript-eslint/parser": "^2.0.0",
-    "eslint": "^6.1.0",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "husky": "^3.0.4",
-    "lint-staged": "^9.2.1",
-    "prettier": "^1.18.2",
-    "typescript": "3.5.3"
+    "@types/node": "^14.0.10",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.8",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.3"
   },
   "license": "ISC"
 }
