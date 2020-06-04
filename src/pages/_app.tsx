@@ -1,14 +1,12 @@
 import React from 'react'
 import App, { AppProps } from 'next/app'
 
-import 'normalize.css/normalize.css'
+import 'normalize.css'
 import 'styles/global.css'
 
-type BoilerplateAppProps = Partial<
-  AppProps & {
-    myProp: string
-  }
->
+type BoilerplateAppProps = AppProps & {
+  myProp: string
+}
 
 export default class BoilerplateApp extends App<BoilerplateAppProps> {
   render() {
