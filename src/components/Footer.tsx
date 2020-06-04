@@ -1,12 +1,21 @@
-import * as React from 'react'
+import React from 'react'
+import styled from 'styled-components'
 
 const Footer: React.FC = () => (
   <React.Fragment>
-    <footer>
-      <hr />
+    <hr />
+    <StyledFooter>
       <span>I'm here to stay (Footer)</span>
-    </footer>
+    </StyledFooter>
   </React.Fragment>
 )
 
 export default Footer
+
+const StyledFooter = styled.footer`
+  padding: 1rem;
+
+  span {
+    font-size: 1.4rem;
+  }
+`
