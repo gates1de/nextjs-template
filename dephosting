@@ -1,0 +1,46 @@
+ENV=$1
+
+DEPLOY_RESULT=0
+
+
+if [ "$ENV" = 'development' ]; then
+
+  rm -rf out \
+  && \cp -f ./.env.development ./.env \
+  && npm run export \
+  && ./node_modules/.bin/firebase use boilerplate-debug \
+  && ./node_modules/.bin/firebase deploy --only hosting:boilerplate
+
+  DEPLOY_RESULT=$?
+
+elif [ "$ENV" = 'staging' ]; then
+
+  rm -rf out \
+  && \cp -f ./.env.staging ./.env \
+  && npm run export \
+  && ./node_modules/.bin/firebase use boilerplate-staging \
+  && ./node_modules/.bin/firebase deploy --only hosting:boilerplate
+
+  DEPLOY_RESULT=$?
+
+elif [ "$ENV" = 'production' ]; then
+
+  rm -rf out \
+  && \cp -f ./.env.production ./.env \
+  && npm run export \
+  && ./node_modules/.bin/firebase use boilerplate-production \
+  && ./node_modules/.bin/firebase deploy --only hosting:boilerplate
+
+  DEPLOY_RESULT=$?
+
+else
+
+  echo "Wrong env name!"
+  exit 1
+
+fi
+
+# Back to development environment
+./node_modules/.bin/firebase use boilerplate-debug
+
+exit $DEPLOY_RESULT

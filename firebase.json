@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "boilerplate",
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "next.config.js",
+        "next-env.d.ts",
+        "README.md",
+        "tsconfig.json",
+        "tsconfig.paths.json",
+        "yarn.lock",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ]
+}
