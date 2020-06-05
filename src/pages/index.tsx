@@ -22,7 +22,9 @@ const IndexPage: NextPage = () => {
       const auth = await loadFirebaseAuth()
       const functions = await loadFirebaseFunctions()
       const storage = await loadFirebaseStorage()
-      console.info(functions, storage)
+      if (process.env.NODE_ENV === 'development') {
+        console.info(functions, storage)
+      }
       setUser(auth.currentUser)
       setIsLoading(false)
     }, 5000)

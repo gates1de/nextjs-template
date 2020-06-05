@@ -1,0 +1,25 @@
+{
+  "targets": {
+    "boilerplate-debug": {
+      "hosting": {
+        "boilerplate": [
+          "boilerplate-debug"
+        ]
+      }
+    },
+    "boilerplate-staging": {
+      "hosting": {
+        "boilerplate": [
+          "boilerplate-staging"
+        ]
+      }
+    },
+    "boilerplate-production": {
+      "hosting": {
+        "boilerplate": [
+          "boilerplate-production"
+        ],
+      }
+    }
+  }
+}

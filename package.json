@@ -5,7 +5,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && next export",
+    "export": "next build && next export",
     "type-check": "tsc",
     "lint": "eslint 'src/**' --ext .ts,.tsx",
     "format": "prettier --write src/*.ts src/**/*.ts src/**/*.tsx"
@@ -41,6 +41,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
+    "firebase-tools": "^8.4.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
