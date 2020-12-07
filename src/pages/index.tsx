@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Layout from 'components/Layout'
 import { NextPage } from 'next'
-import type { User } from 'firebase'
 
 import { loadFirebaseAuth } from 'libs/firebase-auth'
 import { loadFirebaseFunctions } from 'libs/firebase-functions'
@@ -12,7 +11,7 @@ const IndexPage: NextPage = () => {
 
   const [isLoading, setIsLoading] = useState(false)
 
-  const [user, setUser] = useState<User | null | undefined>(undefined)
+  const [user, setUser] = useState<firebase.default.User | null | undefined>(undefined)
 
   // lifecycles
 
