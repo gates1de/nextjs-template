@@ -10,7 +10,7 @@ export const initializeAppIfNeeded = async () => {
       storageBucket: process.env.FIREBASE_STORAGE_BACKET,
       messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
     }
-    firebaseApp.initializeApp(config)
+    firebaseApp.default.initializeApp(config)
   } catch (error) {
     if (error.code && error.code === 'app/duplicate-app') {
       console.log('Firebase app already exists')
@@ -21,5 +21,5 @@ export const initializeAppIfNeeded = async () => {
     }
   }
 
-  return firebaseApp.app()
+  return firebaseApp.default.app()
 }
